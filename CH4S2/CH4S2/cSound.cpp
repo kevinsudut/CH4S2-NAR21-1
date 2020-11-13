@@ -9,6 +9,18 @@ cSound::~cSound()
 {
 }
 
+bool cSound::getIsPlay()
+{
+	return isPlay;
+}
+
+char* cSound::getStatus()
+{
+	char* status = new char;
+	strcpy(status, isPlay ? "Play" : "Stop");
+	return status;
+}
+
 void cSound::play()
 {
 	PlaySound(TEXT("nar.wav"), NULL, SND_LOOP | SND_FILENAME | SND_ASYNC);

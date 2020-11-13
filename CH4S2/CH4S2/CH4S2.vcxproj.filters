@@ -27,10 +27,10 @@
     <ClCompile Include="cGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cColor.cpp">
+    <ClCompile Include="cSetting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cSetting.cpp">
+    <ClCompile Include="cConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,11 +47,21 @@
     <ClInclude Include="cGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cColor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cSetting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cConsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="map.sw">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="nar.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cColor.cpp" />
+    <ClCompile Include="cConsole.cpp" />
     <ClCompile Include="cGame.cpp" />
     <ClCompile Include="CH4S2.cpp" />
     <ClCompile Include="cScene.cpp" />
@@ -147,12 +147,18 @@
     <ClCompile Include="cSound.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cColor.h" />
+    <ClInclude Include="cConsole.h" />
     <ClInclude Include="cGame.h" />
     <ClInclude Include="cScene.h" />
     <ClInclude Include="cSetting.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="cSound.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="map.sw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="nar.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

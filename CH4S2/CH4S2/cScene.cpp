@@ -17,7 +17,7 @@ void cScene::load()
 		int index = 0;
 		while (!feof(file))
 		{
-			int _ = fscanf(file, "%[^\n]\n", map[index++]);
+			fscanf(file, "%[^\n]\n", map[index++]);
 		}
 		fclose(file);
 		return;

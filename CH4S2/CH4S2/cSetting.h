@@ -1,7 +1,8 @@
 #pragma once
+#include "cConsole.h"
 #include "cSound.h"
 
-class cSetting
+class cSetting : public cConsole
 {
 private:
 	cSound* sound;
@@ -9,15 +10,6 @@ private:
 	int speed;
 	int star;
 public:
-	void gotoxy(COORD c)
-	{ 
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
-	}
-	bool validArrow()
-	{
-		return (GetAsyncKeyState(VK_LEFT) || GetAsyncKeyState(VK_RIGHT) || GetAsyncKeyState(VK_UP) || GetAsyncKeyState(VK_DOWN));
-	}
-
 	cSetting();
 	cSetting(cSound* sound);
 	~cSetting();

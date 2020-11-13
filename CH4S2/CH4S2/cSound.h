@@ -7,10 +7,8 @@ private:
 public:
 	cSound();
 	~cSound();
-	bool getIsPlay()
-	{
-		return isPlay;
-	}
+	bool getIsPlay();
+	char* getStatus();
 	void play();
 	void stop();
 };

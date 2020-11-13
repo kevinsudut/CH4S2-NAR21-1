@@ -3,7 +3,6 @@
 
 cGame::cGame()
 {
-	color = new cColor();
 	sound = new cSound();
 	scene = new cScene();
 	setting = new cSetting(sound);
@@ -11,7 +10,6 @@ cGame::cGame()
 
 cGame::~cGame()
 {
-	delete color;
 	delete sound;
 	delete scene;
 	delete setting;
@@ -51,25 +49,24 @@ cGame::~cGame()
 
 void cGame::initialize()
 {
-	color->setColor(C_WHITE);
+	setColor(C_WHITE);
 	sound->play();
-
 	scene->load();
 }
 
 void cGame::run()
 {
-	int choose = 0, _ = 0;
+	int choose = 0;
 	while (choose != 4)
 	{
-		clear_screen();
+		clearScreen();
 		printf("1. Play Game\n");
 		printf("2. Build Map\n");
 		printf("3. Game Setting\n");
 		printf("4. Exit\n");
 		printf(">> ");
-		_ = scanf("%d", &choose);
-		_ = getchar();
+		scanf("%d", &choose);
+		getchar();
 		switch (choose)
 		{
 		case 1:

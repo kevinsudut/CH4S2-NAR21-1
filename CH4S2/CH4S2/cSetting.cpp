@@ -19,14 +19,14 @@ cSetting::~cSetting()
 
 void cSetting::show()
 {
-	for (int _ = 0; _ < 9; _++)
+	for (int i = 0; i < 9; i++)
 	{
 		printf("\n");
 	}
 	printf("\t\t\tMax Star\t>> %04d <<\n", star);
 	printf("\t\t\tMax Block\t   %04d   \n", block);
 	printf("\t\t\tMax Speed\t   %04d   \n", speed);
-	printf("\t\t\tMusic Status\t   %04s   \n", sound->getIsPlay() ? "Play" : "Stop");
+	printf("\t\t\tMusic Status\t   %04s   \n", sound->getStatus());
 }
 
 void cSetting::run()
@@ -46,7 +46,7 @@ void cSetting::run()
 			}
 			if (validArrow())
 			{
-				int _ = getch();
+				getch();
 				gotoxy(left);
 				printf("  ");
 				gotoxy(right);
@@ -192,5 +192,5 @@ void cSetting::soundSetting(int key)
 	{
 		sound->play();
 	}
-	printf("%04s", sound->getIsPlay() ? "Play" : "Stop");
+	printf("%04s", sound->getStatus());
 }
