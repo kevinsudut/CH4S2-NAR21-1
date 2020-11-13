@@ -7,8 +7,8 @@ cSetting::cSetting()
 
 cSetting::cSetting(cSound* sound)
 {
-	this->block = 300;
-	this->star = 250;
+	this->block = 550;
+	this->star = 300;
 	this->speed = 80;
 	this->sound = sound;
 }
@@ -130,13 +130,13 @@ void cSetting::starSetting(int key)
 	switch (key)
 	{
 	case VK_LEFT:
-		if (star > 50)
+		if (star > 100)
 		{
 			printf("%04d", --star);
 		}
 		break;
 	case VK_RIGHT:
-		if (star < 400)
+		if (star < 500)
 		{
 			printf("%04d", ++star);
 		}
@@ -149,13 +149,13 @@ void cSetting::blockSetting(int key)
 	switch (key)
 	{
 	case VK_LEFT:
-		if (block > 100)
+		if (block > 400)
 		{
 			printf("%04d", --block);
 		}
 		break;
 	case VK_RIGHT:
-		if (block < 500)
+		if (block < 700)
 		{
 			printf("%04d", ++block);
 		}
