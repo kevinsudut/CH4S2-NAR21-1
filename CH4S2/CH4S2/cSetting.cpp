@@ -3,30 +3,60 @@
 
 cSetting::cSetting()
 {
-}
-
-cSetting::cSetting(cSound* sound)
-{
 	this->block = 550;
 	this->star = 300;
 	this->speed = 80;
-	this->sound = sound;
+	this->sound = new cSound();
+	this->sound->play();
 }
 
 cSetting::~cSetting()
 {
+	delete sound;
+}
+
+void cSetting::setStar(const int star)
+{
+	this->star = star;
+}
+
+int cSetting::getStar()
+{
+	return star;
+}
+
+void cSetting::setBlock(const int block)
+{
+	this->block = block;
+}
+
+int cSetting::getBlock()
+{
+	return block;
+}
+
+void cSetting::setSpeed(const int speed)
+{
+	this->speed = speed;
+}
+
+int cSetting::getSpeed()
+{
+	return speed;
 }
 
 void cSetting::show()
 {
+	setColor(C_WHITE);
 	for (int i = 0; i < 9; i++)
 	{
 		printf("\n");
 	}
 	printf("\t\t\tMax Star\t>> %04d <<\n", star);
-	printf("\t\t\tMax Block\t   %04d   \n", block);
+	printf("\t\t\tMax Wall\t   %04d   \n", block);
 	printf("\t\t\tMax Speed\t   %04d   \n", speed);
 	printf("\t\t\tMusic Status\t   %04s   \n", sound->getStatus());
+	gotoxy({ 50, 9 });
 }
 
 void cSetting::run()

@@ -4,8 +4,21 @@
 #include "Global.h"
 #include "cGame.h"
 
+void console()
+{
+	system("mode 128,25");
+
+	SetConsoleTitleA("CH4S2 by SW16-2");
+
+	RECT desktop;
+	GetWindowRect(GetDesktopWindow(), &desktop);
+	SetWindowPos(GetConsoleWindow(), 0, desktop.right / 4, desktop.bottom / 4, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+}
+
 int main()
 {
+	console();
+	srand(time(NULL));
 	cGame* game = new cGame();
 	game->initialize();
 	game->run();

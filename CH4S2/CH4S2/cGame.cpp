@@ -3,20 +3,19 @@
 
 cGame::cGame()
 {
-	sound = new cSound();
 	scene = new cScene();
-	setting = new cSetting(sound);
+	setting = new cSetting();
 }
 
 cGame::~cGame()
 {
-	delete sound;
 	delete scene;
 	delete setting;
 
 	system("cls");
+	system("mode 80,25");
+
 	char motto[100] = "\1 Encourage One Another To Improve Our Full Potential \1";
-	puts(""); Sleep(50);
 	puts(""); Sleep(50);
 	puts("      $$$$$$$\\  $$\\                                             $$\\"); Sleep(50);
 	puts("      $$  __$$\\ $$ |                                            $$ |"); Sleep(50);
@@ -50,30 +49,49 @@ cGame::~cGame()
 void cGame::initialize()
 {
 	setColor(C_WHITE);
-	sound->play();
 	scene->load();
 }
 
 void cGame::run()
 {
 	int choose = 0;
-	while (choose != 4)
+	while (choose != 5)
 	{
-		clearScreen();
+		system("cls");
+		scene->show();
+		printf("\n");
+		gotoxy({ 85, 5 });
 		printf("1. Play Game\n");
+		gotoxy({ 85, 6 });
 		printf("2. Build Map\n");
-		printf("3. Game Setting\n");
-		printf("4. Exit\n");
+		gotoxy({ 85, 7 });
+		printf("3. Default Map\n");
+		gotoxy({ 85, 8 });
+		printf("4. Game Setting\n");
+		gotoxy({ 85, 9 });
+		printf("5. Exit ");
+		gotoxy({ 85, 10 });
 		printf(">> ");
 		scanf("%d", &choose);
 		getchar();
 		switch (choose)
 		{
 		case 1:
+			play = new cPlay(scene, setting);
+			play->initialize();
+			play->run();
+			delete play;
 			break;
 		case 2:
+			build = new cBuildMap(scene, setting);
+			build->initialize();
+			build->run();
+			delete build;
 			break;
 		case 3:
+			scene->load();
+			break;
+		case 4:
 			setting->run();
 			break;
 		}

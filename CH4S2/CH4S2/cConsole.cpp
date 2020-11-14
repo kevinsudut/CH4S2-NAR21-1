@@ -3,7 +3,7 @@
 void cConsole::clearScreen()
 {
 	system("cls");
-	for (int _ = 0; _ < 25; _++)
+	for (int i = 0; i < 25; i++)
 	{
 		printf("\n");
 	}
@@ -22,4 +22,9 @@ void cConsole::gotoxy(COORD c)
 bool cConsole::validArrow()
 {
 	return (GetAsyncKeyState(VK_LEFT) || GetAsyncKeyState(VK_RIGHT) || GetAsyncKeyState(VK_UP) || GetAsyncKeyState(VK_DOWN));
+}
+
+int cConsole::random(int max, int min)
+{
+	return rand() % (max - min) + min;
 }

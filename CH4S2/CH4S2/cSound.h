@@ -3,7 +3,7 @@
 class cSound
 {
 private:
-	bool isPlay = false;
+	bool isPlay;
 public:
 	cSound();
 	~cSound();

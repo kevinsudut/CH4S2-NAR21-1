@@ -139,16 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cBuildMap.cpp" />
     <ClCompile Include="cConsole.cpp" />
     <ClCompile Include="cGame.cpp" />
     <ClCompile Include="CH4S2.cpp" />
+    <ClCompile Include="cNode.cpp" />
+    <ClCompile Include="cPlay.cpp" />
     <ClCompile Include="cScene.cpp" />
     <ClCompile Include="cSetting.cpp" />
     <ClCompile Include="cSound.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cBuildMap.h" />
     <ClInclude Include="cConsole.h" />
     <ClInclude Include="cGame.h" />
+    <ClInclude Include="cNode.h" />
+    <ClInclude Include="cPlay.h" />
     <ClInclude Include="cScene.h" />
     <ClInclude Include="cSetting.h" />
     <ClInclude Include="Global.h" />

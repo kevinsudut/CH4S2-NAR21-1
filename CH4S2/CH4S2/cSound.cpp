@@ -3,6 +3,7 @@
 
 cSound::cSound()
 {
+	this->isPlay = false;
 }
 
 cSound::~cSound()

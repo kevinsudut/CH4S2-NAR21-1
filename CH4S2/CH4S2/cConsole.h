@@ -13,4 +13,5 @@ protected:
 	void setColor(WORD w);
 	void gotoxy(COORD c);
 	bool validArrow();
+	int random(int max, int min);
 };
