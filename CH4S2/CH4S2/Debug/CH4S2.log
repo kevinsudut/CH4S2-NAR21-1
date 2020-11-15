@@ -1,9 +1,0 @@
-﻿  CH4S2.cpp
-  cConsole.cpp
-  cGame.cpp
-D:\CH4S2-NAR21-1\CH4S2\CH4S2\cGame.cpp(44,20): warning C4018: '<': signed/unsigned mismatch
-  cScene.cpp
-  cSetting.cpp
-  cSound.cpp
-  Generating Code...
-  CH4S2.vcxproj -> D:\CH4S2-NAR21-1\CH4S2\Debug\CH4S2.exe
