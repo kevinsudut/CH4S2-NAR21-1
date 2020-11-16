@@ -56,6 +56,7 @@ void cScene::show()
 			switch (map[i][j].getStatus())
 			{
 			case FLOOR:
+				setColor(C_WHITE);
 				printf(" ");
 				break;
 			case WALL:

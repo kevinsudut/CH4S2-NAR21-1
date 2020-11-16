@@ -84,7 +84,7 @@ void cPlay::generate()
 void cPlay::run()
 {
 	int count = 0;
-	
+	setColor(C_WHITE);
 	gotoxy({ 89, 4 });
 	printf("%c", 201);
 	for (int i = 0; i < 25; i++)
@@ -118,7 +118,7 @@ void cPlay::run()
 	gotoxy({ 101, 10 });
 	printf("%03d", count);	
 	gotoxy({ 89, 12 });
-	printf("Finished catch all the star");
+	printf("Finished catch all the stars");
 	getchar();
 }
 
